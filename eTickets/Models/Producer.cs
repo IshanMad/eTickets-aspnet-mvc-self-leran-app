@@ -3,14 +3,15 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eTickets.Models
 {
-    public class Actor
+    public class Producer
     {
         [Key]
         public int Id { get; set; }
         public string ProfilePictureURL { get; set; }
         public string FullName { get; set; }
         public string Bio { get; set; }
-        //add relationship
-        public List<Actor_Movie> Actor_Movies { get; set; }
+        //relationships
+        //one producer has multiple movies
+        public List<Movie> Movies { get; set; }
     }
 }
